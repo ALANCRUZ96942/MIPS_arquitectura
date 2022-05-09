@@ -1,0 +1,7 @@
+PC ENTITY
+Seu ENTITY
+pc_adder ENTITY
+InstructionMemory ENTITY
+Registers ENTITY
+ALUS1 ENTITY
+datamemory ENTITY

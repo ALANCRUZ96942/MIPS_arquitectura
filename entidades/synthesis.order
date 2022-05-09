@@ -1,0 +1,8 @@
+i<>.\src\seu.vhd
+i<>.\src\instructionmemory.vhd
+i<>.\src\alus1.vhd
+i<>.\src\mips_registers.vhd
+i<>.\src\pc.vhd
+i<>.\src\pc_adder.vhd
+i<>.\src\datamemory.vhd
+i<>.\src\MIPS.vhd

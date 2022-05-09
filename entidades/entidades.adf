@@ -1,0 +1,36 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=entidades
+[Library]
+entidades=.\entidades\entidades.lib
+[$LibMap$]
+entidades=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+[Files]
+/seu.vhd=-1
+/instructionmemory.vhd=-1
+/alus1.vhd=-1
+/mips_registers.vhd=-1
+/pc.vhd=-1
+/pc_adder.vhd=-1
+/datamemory.vhd=-1
+/MIPS.vhd=-1
+[Files.Data]
+.\src\seu.vhd=VHDL Source Code
+.\src\instructionmemory.vhd=VHDL Source Code
+.\src\alus1.vhd=VHDL Source Code
+.\src\mips_registers.vhd=VHDL Source Code
+.\src\pc.vhd=VHDL Source Code
+.\src\pc_adder.vhd=VHDL Source Code
+.\src\datamemory.vhd=VHDL Source Code
+.\src\MIPS.vhd=VHDL Source Code
