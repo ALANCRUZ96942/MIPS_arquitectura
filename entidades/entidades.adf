@@ -25,6 +25,7 @@ FAMILY=
 /pc_adder.vhd=-1
 /datamemory.vhd=-1
 /MIPS.vhd=-1
+/MIPS.vhd=-1
 [Files.Data]
 .\src\seu.vhd=VHDL Source Code
 .\src\instructionmemory.vhd=VHDL Source Code
@@ -33,4 +34,5 @@ FAMILY=
 .\src\pc.vhd=VHDL Source Code
 .\src\pc_adder.vhd=VHDL Source Code
 .\src\datamemory.vhd=VHDL Source Code
+.\src\MIPS.vhd=VHDL Source Code
 .\src\MIPS.vhd=VHDL Source Code

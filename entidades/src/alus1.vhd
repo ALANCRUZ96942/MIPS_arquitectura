@@ -1,14 +1,14 @@
 -------------------------------------------------------------------------------
 --
--- Title       : ALUS1
--- Design      : ALUS1
--- Author      : Emmanuel Ramirez
--- Company     : Instituto Tecnologicoy  de Estudios Superiores de Monterrey
+-- Title       : ALU
+-- Design      : ALU
+-- Author      : 
+-- Company     : 
 --
 -------------------------------------------------------------------------------
 --
--- File        : c:\My_Designs\ALUS1\ALUS1\src\ALUS1.vhd
--- Generated   : Mon Apr 18 17:17:00 2022
+-- File        : c:\My_Designs\ALU21\ALU\src\ALU.vhd
+-- Generated   : Mon May  9 14:03:34 2022
 -- From        : interface description file
 -- By          : Itf2Vhdl ver. 1.22
 --
@@ -18,48 +18,43 @@
 --
 -------------------------------------------------------------------------------
 
---{{ Section below this comment is automatically maintained
---   and may be overwritten
---{entity {ALUS1} architecture {ALUS1}}
 
 library ieee;
 use iEEE.std_logic_1164.all;
 use iEEE.std_logic_arith.all;
 use iEEE.std_logic_unsigned.all;
 
-entity ALUS1 is	
+entity ALU is
 port (
 		a 			: in std_logic_vector (31 downto 0); --operador1
 		b 			: in std_logic_vector (31 downto 0); --operador2
-		operacion	: in std_logic_vector (2 downto 0); --selector
+		operacion	: in std_logic_vector (3 downto 0); --selector
 		result 		: out std_logic_vector (31 downto 0); --resultado
 		carry_out	: out std_logic;
 		cero 		: out std_logic 
-	 );	
-	
-end ALUS1;
+	 );
+end ALU;
 
+--}} End of automatically maintained section
 
-
-architecture ALUS1 of ALUS1 is
+architecture ALU1 of ALU is
 begin
 
-process(a, b, operacion)
+	process(a, b, operacion)
 	begin
 		case operacion is
-			when "000" => result <= a and b; --AND
-			when "001" => result <= a or b; --OR
-			when "010" => result <= a nor b; --NOR
-			when "011" => result <= a + b; --Addition
-			when "100" => result <= a - b; --subtraction
+			when "0000" => result <= a and b; --AND
+			when "0001" => result <= a or b; --OR
+			when "0010" => result <= a + b; --ADD
+			when "0110" => result <= a - b; --SUBTRACTION
+			when "0111" => if(a>b) then
+				result <= "00000000000000000000000000000001";
+			else
+				result <= "00000000000000000000000000000000";	
+			end if; --set on less than 
+			when "1100" => result <= a nor b; 
 			when others => NULL;
 		end case;
-end process;
+		end process;
 		
-
-end ALUS1;
-
-
-
-
-
+end ALU1;

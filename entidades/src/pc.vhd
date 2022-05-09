@@ -7,20 +7,27 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity PC is
     Port ( Input :  in STD_LOGIC_VECTOR (31 downto 0);
-	Output : out STD_LOGIC_VECTOR (31 downto 0));
+	Output : out STD_LOGIC_VECTOR (31 downto 0);  
+	clock : in STD_logic);	
+
 end PC;
 
 
-architecture Behavioral of PC is	   
-	Signal add: STD_LOGIC_VECTOR (31 downto 0);
+architecture Behavioral of PC is	  
+
+  signal pc_actual: std_logic_vector(  31 downto 0);
+
 	
 	begin
-	   process (Input)
-	    begin
-	   	   	Output <= Input;
-	
-		end process;	 
+		
+		process(clock)
+		begin
+			if(rising_edge(clock))then
+				pc_actual <= Input;
+			end if;
 
+		end process;
+		Output <= pc_actual;		
 end Behavioral;	
 
 		

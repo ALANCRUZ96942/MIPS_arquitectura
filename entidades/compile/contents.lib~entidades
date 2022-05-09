@@ -1,12 +1,15 @@
-1
+5
+~E 1 "../src/alus1.vhd" 27 ALU
+~A 1 "../src/alus1.vhd" 40 ALU1
 ~E 1 "../src/alus1.vhd" 30 ALUS1
 ~A 1 "../src/alus1.vhd" 44 ALUS1
 ~E 1 "../src/datamemory.vhd" 30 datamemory
 ~A 1 "../src/datamemory.vhd" 42 Behavioral
 ~E 1 "../src/instructionmemory.vhd" 30 InstructionMemory
 ~A 1 "../src/instructionmemory.vhd" 38 Behavioral
+~E 1 "../src/MIPS.vhd" 6 MIPS
 ~E 1 "../src/pc.vhd" 8 PC
-~A 1 "../src/pc.vhd" 14 Behavioral
+~A 1 "../src/pc.vhd" 16 Behavioral
 ~E 1 "../src/pc_adder.vhd" 8 pc_adder
 ~A 1 "../src/pc_adder.vhd" 14 Behavioral
 ~E 1 "../src/mips_registers.vhd" 6 Registers
