@@ -15,13 +15,19 @@ entity MIPS is
 
 end MIPS;
 
-arquitecture structural of MIPS is
+architecture structural of MIPS is 
+
+	component pc is	
+	    Port ( Input :  in STD_LOGIC_VECTOR (31 downto 0);
+		Output : out STD_LOGIC_VECTOR (31 downto 0);  
+		clock : in STD_logic);		
+	end component;
 
 	component ALUS1 is	
 		port (
 		a 			: in std_logic_vector (31 downto 0); --operador1
 		b 			: in std_logic_vector (31 downto 0); --operador2
-		operacion	: in std_logic_vector (2 downto 0); --selector
+		operacion	: in std_logic_vector (3 downto 0); --selector
 		result 		: out std_logic_vector (31 downto 0); --resultado
 		carry_out	: out std_logic;
 		cero 		: out std_logic 
@@ -38,4 +44,4 @@ arquitecture structural of MIPS is
 begin 
 	
 	--ALUS1 port map (a,b	   ..., 
-end arquitecture;
+end architecture;

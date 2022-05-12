@@ -6,3 +6,5 @@ i<>.\src\pc.vhd
 i<>.\src\pc_adder.vhd
 i<>.\src\datamemory.vhd
 i<>.\src\MIPS.vhd
+i<>.\src\mux0_1.vhd
+i<>.\src\MUX2.vhd

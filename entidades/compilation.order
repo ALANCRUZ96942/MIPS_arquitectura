@@ -4,5 +4,7 @@
 .\src\mips_registers.vhd
 .\src\pc.vhd
 .\src\pc_adder.vhd
-.\src\datamemory.vhd
 .\src\MIPS.vhd
+.\src\datamemory.vhd
+.\src\MUX1.vhd
+.\src\MUX2.vhd

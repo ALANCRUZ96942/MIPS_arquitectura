@@ -23,9 +23,10 @@ FAMILY=
 /mips_registers.vhd=-1
 /pc.vhd=-1
 /pc_adder.vhd=-1
+/MIPS.vhd=-1
 /datamemory.vhd=-1
-/MIPS.vhd=-1
-/MIPS.vhd=-1
+/MUX1.vhd=-1
+/MUX2.vhd=-1
 [Files.Data]
 .\src\seu.vhd=VHDL Source Code
 .\src\instructionmemory.vhd=VHDL Source Code
@@ -33,6 +34,11 @@ FAMILY=
 .\src\mips_registers.vhd=VHDL Source Code
 .\src\pc.vhd=VHDL Source Code
 .\src\pc_adder.vhd=VHDL Source Code
+.\src\MIPS.vhd=VHDL Source Code
 .\src\datamemory.vhd=VHDL Source Code
-.\src\MIPS.vhd=VHDL Source Code
-.\src\MIPS.vhd=VHDL Source Code
+.\src\MUX1.vhd=VHDL Source Code
+.\src\MUX2.vhd=VHDL Source Code
+[HierarchyViewer]
+HierarchyInformation=pc|Behavioral|0
+ShowHide=ShowTopLevel
+Selected=

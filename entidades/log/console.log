@@ -1,0 +1,58 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work entidades -2002  $dsn/src/mips_registers.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/MIPS_final/entidades/src/mips_registers.vhd
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Error: COMP96_0015: mips_registers.vhd : (38, 55): ')' expected.
+# Error: COMP96_0015: mips_registers.vhd : (39, 55): ')' expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work entidades -2002  $dsn/src/mips_registers.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/MIPS_final/entidades/src/mips_registers.vhd
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Error: COMP96_0015: mips_registers.vhd : (29, 10): ':' expected.
+# Error: COMP96_0015: mips_registers.vhd : (30, 10): ':' expected.
+# Error: COMP96_0019: mips_registers.vhd : (45, 2): Keyword 'when' expected.
+# Error: COMP96_0015: mips_registers.vhd : (45, 2): ';' expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work entidades -2002  $dsn/src/mips_registers.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/MIPS_final/entidades/src/mips_registers.vhd
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Error: COMP96_0015: mips_registers.vhd : (29, 10): ':' expected.
+# Error: COMP96_0015: mips_registers.vhd : (30, 10): ':' expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work entidades -2002  $dsn/src/mips_registers.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/MIPS_final/entidades/src/mips_registers.vhd
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Error: COMP96_0078: mips_registers.vhd : (43, 2): Unknown identifier "r2".
+# Error: COMP96_0133: mips_registers.vhd : (43, 2): Cannot find object declaration.
+# Error: COMP96_0078: mips_registers.vhd : (46, 32): Unknown identifier "r2".
+# Error: COMP96_0133: mips_registers.vhd : (46, 32): Cannot find object declaration.
+# Error: COMP96_0305: mips_registers.vhd : (46, 19): Cannot find function "conv_integer" for these actuals.
+# Error: COMP96_0138: mips_registers.vhd : (46, 19): The index types in the reference to the array object are incompatible with its range type.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work entidades -2002  $dsn/src/mips_registers.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/MIPS_final/entidades/src/mips_registers.vhd
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work entidades -2002  $dsn/src/mips_registers.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/MIPS_final/entidades/src/mips_registers.vhd
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work entidades -2002  $dsn/src/mips_registers.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/MIPS_final/entidades/src/mips_registers.vhd
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile success 0 Errors 0 Warnings  Analysi
