@@ -1,13 +1,13 @@
-timestamp=1652383250631
+timestamp=1652383832257
 
 [~A]
-ModifyID=14
+ModifyID=15
 Version=74
 
 [~MFT]
-0=12|0entidades.mgf|38498|13132
-1=2|1entidades.mgf|53962|34674
-3=2|3entidades.mgf|12760|6784
+0=2|0entidades.mgf|38787|13426
+1=2|1entidades.mgf|55092|38308
+3=2|3entidades.mgf|13229|7958
 
 [alu]
 A/alu1=A/ALU1 21|../src/alus1.vhd|40|1*33823
@@ -104,15 +104,15 @@ Version=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|d7655ceaba66161
 Version/behavioral=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff47ad12e6781eaa3916819b14ac56fe3a3
 
 [registers]
-A/behavioral=A/Behavioral 21|../src/mips_registers.vhd|17|1*48037
-BinW64/behavioral=3*10744
+A/behavioral=A/Behavioral 21|../src/mips_registers.vhd|17|1*55092
+BinW64/behavioral=3*13229
 I=0*27376
-I/behavioral=I/Behavioral 0*35007
+I/behavioral=I/Behavioral 0*38787
 M=11|2|vef|1652382849393|../src/mips_registers.vhd|0*26780*0xb508868823e532206e28fe9eed9aa9c2f33087ce|0*27288*0x23b75c12e3e89f2ef000564498faa8c2
-M/behavioral=M/Behavioral 21|2|vef|1652383155096|../src/mips_registers.vhd|0*32811*0x38db36e9938228a66796c5c5754f3d01cf587f3e|0*34905*0x20116f55b147878295aeff36dce7fc50
+M/behavioral=M/Behavioral 21|2|vef|1652383832238|../src/mips_registers.vhd|0*32811*0x38db36e9938228a66796c5c5754f3d01cf587f3e|0*34905*0x20116f55b147878295aeff36dce7fc50
 R=../src/mips_registers.vhd|6
 Version=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|2314fdb2a4dd7301b5d97b47fbce135ee711739d3258eb7291525b46820d6d991124d45ba4ecae70da3e6132e3c6c2d2
-Version/behavioral=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff44b6917eb0ee2ae36d3e6bcf4eeca90ad
+Version/behavioral=13.0.376.8320 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff42d6456c0977f4c3c7a754941a29306f8
 
 [seu]
 A/behavioral=A/Behavioral 21|../src/seu.vhd|14|1*52813

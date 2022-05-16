@@ -10,3 +10,5 @@ order=1
 macro=
 [Expand]
 entidades=1
+[Settings]
+Active=entidades

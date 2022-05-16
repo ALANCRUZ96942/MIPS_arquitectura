@@ -1,7 +1,5 @@
 .\src\seu.vhd
-.\src\instructionmemory.vhd
 .\src\alus1.vhd
-.\src\mips_registers.vhd
 .\src\pc.vhd
 .\src\pc_adder.vhd
 .\src\MIPS.vhd
