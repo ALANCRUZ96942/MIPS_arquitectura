@@ -8,3 +8,6 @@ i<>.\src\datamemory.vhd
 i<>.\src\MIPS.vhd
 i<>.\src\mux0_1.vhd
 i<>.\src\MUX2.vhd
+i<>.\src\control.vhd
+i<>.\src\ALU_control.vhd
+i<>.\src\MUX3.vhd

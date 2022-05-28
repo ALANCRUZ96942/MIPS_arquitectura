@@ -1,8 +1,13 @@
 .\src\seu.vhd
+.\src\instructionmemory.vhd
 .\src\alus1.vhd
+.\src\mips_registers.vhd
 .\src\pc.vhd
-.\src\pc_adder.vhd
+.\src\PC_SECTION1.vhd
 .\src\MIPS.vhd
 .\src\datamemory.vhd
 .\src\MUX1.vhd
 .\src\MUX2.vhd
+.\src\MUX3.vhd
+.\src\ALU_control.vhd
+.\src\control.vhd

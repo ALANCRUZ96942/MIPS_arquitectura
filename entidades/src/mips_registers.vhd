@@ -3,12 +3,12 @@ use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 
-entity Registers is
-	Generic(size:integer := 32);
+entity Registers is						  
+	Generic(size:integer := 64);
     Port (
 	ReadADR1, ReadADR2: in  STD_LOGIC_VECTOR(size-1 downto 0); --Address inputs (5 bits)
 	 WriteADR1 : IN STd_logic_vector(4 downto 0);
-		WriteReadSEL, clock : in STD_LOGIC; --Control signals: WriteReadSEL	= 0: writing disabled
+		WriteReadSEL,clock : in STD_LOGIC; --Control signals: WriteReadSEL	= 0: writing disabled
 		DataIn1: in STD_LOGIC_VECTOR (size-1 downto 0); --Data Input to be saved (32 bits)
 		DataOut1, DataOut2: out STD_LOGIC_VECTOR(size-1 downto 0)); --Data output (32 bits)
 end Registers;
@@ -28,16 +28,20 @@ X"00000000",X"00000000",X"00000000",X"00000000");
 
 
 begin
-	process(clock)
-		begin
-			if(rising_edge(clock))then
-					if(WriteReadSEL = '1') then
+	process(clock)																				--ise 14.7
+	begin
+		if(rising_edge(clock))then									 --subida lectura	 
+					DataOut1 <= Bank(conv_integer(ReadADR1(25 downto 21)));--Parallel	output
+					DataOut2 <= Bank(conv_integer(ReadADR2(20 downto 16)));	
+					--if(WriteReadSEL = '') then
+		end if;	
+					
+	  if (falling_edge(clock))	then		-- bajada escritura	
+				 if(WriteReadSEL = '1') then
 						Bank(conv_integer(WriteADR1)) <= DataIn1; --Save DataIn in Writeaddress 
-					end if;		
-			end if;
+				end if;	
+		end if;
 	end process;   
-	
-	DataOut1 <= Bank(conv_integer(ReadADR1(25 downto 21)));--Parallel	output
-	DataOut2 <= Bank(conv_integer(ReadADR2(20 downto 16)));	
+
 	
 end Behavioral;

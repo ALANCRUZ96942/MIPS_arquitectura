@@ -1,21 +1,30 @@
-15
+84
 ~E 1 "../src/alus1.vhd" 27 ALU
-~A 1 "../src/alus1.vhd" 40 ALU1
+~A 1 "../src/alus1.vhd" 39 ALU1
+~E 1 "../src/ALU_control.vhd" 8 ALU_control
+~A 1 "../src/ALU_control.vhd" 16 Behavioral
 ~E 1 "../src/alus1.vhd" 30 ALUS1
 ~A 1 "../src/alus1.vhd" 44 ALUS1
+~E 1 "../src/control.vhd" 8 Control
+~A 1 "../src/control.vhd" 23 Behavioral
 ~E 1 "../src/datamemory.vhd" 30 datamemory
 ~A 1 "../src/datamemory.vhd" 42 Behavioral
 ~E 1 "../src/instructionmemory.vhd" 30 InstructionMemory
-~A 1 "../src/instructionmemory.vhd" 38 Behavioral
+~A 1 "../src/instructionmemory.vhd" 41 Behavioral
 ~E 1 "../src/MIPS.vhd" 6 MIPS
-~A 1 "../src/MIPS.vhd" 18 structural
+~A 1 "../src/MIPS.vhd" 14 structural
 ~E 1 "../src/MUX1.vhd" 6 MUX1
-~A 1 "../src/MUX2.vhd" 14 Behavioral
+~A 1 "../src/MUX1.vhd" 14 Behavioral
 ~E 1 "../src/MUX2.vhd" 6 MUX2
+~A 1 "../src/MUX2.vhd" 14 Behavioral
+~E 1 "../src/MUX3.vhd" 6 MUX3
+~A 1 "../src/MUX3.vhd" 14 Behavioral
 ~E 1 "../src/pc.vhd" 8 PC
 ~A 1 "../src/pc.vhd" 16 Behavioral
 ~E 1 "../src/pc_adder.vhd" 8 pc_adder
 ~A 1 "../src/pc_adder.vhd" 14 Behavioral
+~E 1 "../src/PC_SECTION1.vhd" 7 PC_SECTION1
+~A 1 "../src/PC_SECTION1.vhd" 18 Behavioral
 ~E 1 "../src/mips_registers.vhd" 6 Registers
 ~A 1 "../src/mips_registers.vhd" 17 Behavioral
 ~E 1 "../src/seu.vhd" 8 Seu

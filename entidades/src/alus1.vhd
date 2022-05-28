@@ -30,31 +30,45 @@ port (
 		b 			: in std_logic_vector (31 downto 0); --operador2
 		operacion	: in std_logic_vector (3 downto 0); --selector
 		result 		: out std_logic_vector (31 downto 0); --resultado
-		carry_out	: out std_logic;
 		cero 		: out std_logic 
 	 );
 end ALU;
 
 --}} End of automatically maintained section
 
-architecture ALU1 of ALU is
-begin
+architecture ALU1 of ALU is		 
+Signal result_in: STD_LOGIC_VECTOR (31 downto 0); 
 
-	process(a, b, operacion)
-	begin
+begin		   
+	
+	process(a, b, operacion,result_in) 		
+	begin			   
+			
+		
 		case operacion is
-			when "0000" => result <= a and b; --AND
-			when "0001" => result <= a or b; --OR
-			when "0010" => result <= a + b; --ADD
-			when "0110" => result <= a - b; --SUBTRACTION
+			when "0000" => result_in <= a and b; --AND	
+			when "0001" => result_in <= a or b; --OR
+			when "0010" => result_in <= a + b; --ADD
+			when "0110" => result_in <= a - b; --SUBTRACTION
 			when "0111" => if(a>b) then
-				result <= "00000000000000000000000000000001";
+				result_in <= "00000000000000000000000000000001";
 			else
-				result <= "00000000000000000000000000000000";	
+				result_in <= "00000000000000000000000000000000";	
 			end if; --set on less than 
-			when "1100" => result <= a nor b; 
+			when "1100" => result_in <= a nor b; 
 			when others => NULL;
-		end case;
-		end process;
+		end case;	 
+					    
+		
+		if(result_in = "00000000000000000000000000000000") then
+			cero  <= '1'; 
+		else   
+			cero  <= '0';
+		end if;
+		
+		
+		end process; 
+					   
+			result  <=  result_in ;
 		
 end ALU1;
