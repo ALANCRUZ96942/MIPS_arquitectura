@@ -15,17 +15,16 @@ end PC;
 
 architecture Behavioral of PC is	  
 
-  signal pc_actual: std_logic_vector(  31 downto 0);
-
-	
+  signal pc_actual: std_logic_vector(31 downto 0):= "00000000000000000000000000000000";
+						  
 	begin
-		
+	
 		process(clock)
+	
 		begin
-			if(rising_edge(clock))then
+			if(falling_edge(clock))then
 				pc_actual <= Input;
 			end if;
-
 		end process;
 		Output <= pc_actual;		
 end Behavioral;	

@@ -106,7 +106,7 @@ X"00000002",
 X"00000001",
 X"00000000");
 begin
-	process(clock)
+	process(clock,MemoryRead,MemoryWrite,Address,WriteData)
 		begin
 			if(rising_edge(clock))then
 				if(MemoryRead = '1')then

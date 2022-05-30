@@ -40,7 +40,8 @@ end InstructionMemory;
 
 architecture Behavioral of InstructionMemory is
 type memoryType is array (0 to 51) of STD_LOGIC_VECTOR (31 downto 0);
-signal memory : memoryType :=("00000000000000010001000000100000", -- ADD de $s0 y $s1, se guarda en $s2 
+signal memory : memoryType :=(
+"00000000000000010001000000100000", -- ADD de $s0 y $s1, se guarda en $s2 
 "00000000100000110010100000100010", -- SUB de $s4 y $s3, se guarda en $s5 
 "00000000110001110100000000100100", -- AND de $s6 y $s7, se guarda en $s8
 "00000001001010100101100000100101", -- OR de $s9 y $s10, se guarda en $s11

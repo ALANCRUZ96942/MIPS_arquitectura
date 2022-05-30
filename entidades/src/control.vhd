@@ -23,7 +23,7 @@ end Control;
 architecture Behavioral of Control is
 	Signal Ins: STD_LOGIC_VECTOR (5 downto 0);
 	begin
-	   process (Instruction(31 downto 26))  
+	   process (Instruction(31 downto 26),Ins)  
 	    
 	   begin	   
 		      Ins <= Instruction(31 downto 26); 

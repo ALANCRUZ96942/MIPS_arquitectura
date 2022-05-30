@@ -1,4 +1,4 @@
-84
+133
 ~E 1 "../src/alus1.vhd" 27 ALU
 ~A 1 "../src/alus1.vhd" 39 ALU1
 ~E 1 "../src/ALU_control.vhd" 8 ALU_control
@@ -25,6 +25,8 @@
 ~A 1 "../src/pc_adder.vhd" 14 Behavioral
 ~E 1 "../src/PC_SECTION1.vhd" 7 PC_SECTION1
 ~A 1 "../src/PC_SECTION1.vhd" 18 Behavioral
+~E 1 "../src/pruebas.vhd" 6 pruebas
+~A 1 "../src/pruebas.vhd" 16 structural
 ~E 1 "../src/mips_registers.vhd" 6 Registers
 ~A 1 "../src/mips_registers.vhd" 17 Behavioral
 ~E 1 "../src/seu.vhd" 8 Seu

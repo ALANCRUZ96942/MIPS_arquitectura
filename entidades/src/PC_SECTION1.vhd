@@ -10,8 +10,8 @@ entity PC_SECTION1 is
 		Branch, Zero, Jump: in STD_LOGIC; 	--Control signals (Boolean)
 		SignExtend, Instruction: in STD_LOGIC_VECTOR (size-1 downto 0); --From sign extend (32 bits)
 		NextAddress: out  STD_LOGIC_VECTOR(size-1 downto 0);   				--from PC Output  (32 bits)
-		ReadAddress: in  STD_LOGIC_VECTOR(size-1 downto 0);					-- form PC Input (32 bits) actual address
-		clock : in STD_logic);
+		ReadAddress: in  STD_LOGIC_VECTOR(size-1 downto 0)					-- form PC Input (32 bits) actual address
+	);
 end PC_SECTION1;
 
 
@@ -20,15 +20,13 @@ signal Inst_Shift1: STD_LOGIC_VECTOR (27 downto 0);			--To save Shifted  value
 signal SignExt_Shift: STD_LOGIC_VECTOR (size-1 downto 0); 	--To save Shifted  value		
 signal BEQ: STD_LOGIC; 										--Branch on equal
 signal Add_1: STD_LOGIC_VECTOR (size-1 downto 0); 			--To save Add1_module value (32 bits) / ADDR Normal op. (pc+4)
-signal Add_2: STD_LOGIC_VECTOR (size-1 downto 0);			--To save Add2_module value (32 bits) / ADDR to go in case of BEQ  
-
-
+ 
 begin
-	process(Branch, Zero, Jump, SignExtend, Instruction, ReadAddress) 
+	process(Branch, Zero, Jump, SignExtend, Instruction, ReadAddress,Add_1,SignExt_Shift,Inst_Shift1) 
 		begin
 			
 			BEQ <= Branch and Zero; -- Branch AND zero to determine BEQ
-			Add_1 <= ReadAddress + 4;		-- Add1 (Normal operation)
+			Add_1 <= ReadAddress + 1;		-- Add1 (Normal operation) -- en verdad es mas 1?
 
 			if(Jump = '1') then  --MUX_PC_1	
 				Inst_Shift1 <= Instruction (25 downto 0) & "00"; --Shift Instruc (25-0) => (27-0);
@@ -41,5 +39,6 @@ begin
 					NextAddress <= Add_1 + SignExt_Shift; --======================================  Calc BEQ address
 				end if;
 			end if;
-	end process;	
+	end process;
+	
 end Behavioral;

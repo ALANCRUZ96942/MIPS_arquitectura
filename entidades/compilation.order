@@ -11,3 +11,4 @@
 .\src\MUX3.vhd
 .\src\ALU_control.vhd
 .\src\control.vhd
+.\src\pruebas.vhd

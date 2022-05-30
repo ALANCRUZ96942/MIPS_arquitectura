@@ -1,4 +1,4 @@
-Active-HDL 13.0.376.8320 2022-05-28 14:49:19
+Active-HDL 13.0.376.8320 2022-05-29 20:17:27
 
 Elaboration top modules:
 Architecture                  structural(MIPS)
@@ -19,6 +19,7 @@ Seu               | Behavioral   | entidades |      | 13.0.376.8320 (Windows64) 
 datamemory        | Behavioral   | entidades |      | 13.0.376.8320 (Windows64) | -O3
 PC_SECTION1       | Behavioral   | entidades |      | 13.0.376.8320 (Windows64) | -O3
 PC                | Behavioral   | entidades |      | 13.0.376.8320 (Windows64) | -O3
+ALU               | ALU1         | entidades |      | 13.0.376.8320 (Windows64) | -O3
 ------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------
@@ -38,9 +39,3 @@ entidades                        | None
 ieee                             | Standard IEEE packages library
 std                              | Standard VHDL library
 ------------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim -O5 +access +r +m+MIPS MIPS structural
-
-
-The performance of simulation is reduced. Version Student Edition

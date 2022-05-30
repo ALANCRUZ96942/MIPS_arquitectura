@@ -11,3 +11,4 @@ i<>.\src\MUX2.vhd
 i<>.\src\control.vhd
 i<>.\src\ALU_control.vhd
 i<>.\src\MUX3.vhd
+i<>.\src\pruebas.vhd

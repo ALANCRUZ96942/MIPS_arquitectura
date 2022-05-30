@@ -4,7 +4,7 @@ use IEEE.std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 
 entity Registers is						  
-	Generic(size:integer := 64);
+	Generic(size:integer := 32);
     Port (
 	ReadADR1, ReadADR2: in  STD_LOGIC_VECTOR(size-1 downto 0); --Address inputs (5 bits)
 	 WriteADR1 : IN STd_logic_vector(4 downto 0);
@@ -28,20 +28,24 @@ X"00000000",X"00000000",X"00000000",X"00000000");
 
 
 begin
-	process(clock)																				--ise 14.7
+	process(clock,ReadADR1,ReadADR2,WriteReadSEL,DataIn1,WriteADR1)																				--ise 14.7
 	begin
 		if(rising_edge(clock))then									 --subida lectura	 
 					DataOut1 <= Bank(conv_integer(ReadADR1(25 downto 21)));--Parallel	output
 					DataOut2 <= Bank(conv_integer(ReadADR2(20 downto 16)));	
-					--if(WriteReadSEL = '') then
+		
 		end if;	
-					
+				
+	end process;   
+   
+	
+	process(clock,ReadADR1,ReadADR2,WriteReadSEL,DataIn1,WriteADR1)																				--ise 14.7
+	begin
 	  if (falling_edge(clock))	then		-- bajada escritura	
 				 if(WriteReadSEL = '1') then
 						Bank(conv_integer(WriteADR1)) <= DataIn1; --Save DataIn in Writeaddress 
 				end if;	
 		end if;
-	end process;   
-
+	end process;  
 	
 end Behavioral;
