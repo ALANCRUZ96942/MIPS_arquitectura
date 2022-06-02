@@ -26,9 +26,9 @@ FileTimeLow=1605890121
 FileTimeHigh=30963026
 Status=Compiled
 [COMPILESTATUS|.\src\datamemory.vhd]
-FileTimeLow=1851468000
-FileTimeHigh=30963192
-Status=Compiled
+FileTimeLow=1920101889
+FileTimeHigh=30963222
+Status=Modified
 [COMPILESTATUS|.\src\MIPS.vhd]
 FileTimeLow=3253538911
 FileTimeHigh=30963200

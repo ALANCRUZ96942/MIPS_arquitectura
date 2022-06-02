@@ -1,4 +1,4 @@
-174
+175
 ~E 1 "../src/alus1.vhd" 27 ALU
 ~A 1 "../src/alus1.vhd" 39 ALU1
 ~E 1 "../src/ALU_control.vhd" 8 ALU_control

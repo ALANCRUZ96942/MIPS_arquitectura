@@ -112,13 +112,7 @@ begin
 				if(MemoryRead = '1')then
 					ReadData <= memory(conv_integer(address(5 downto 0))); 	 
 				end if;			
-	    end if;
-	end process;
-	
-	
-		process(clock,MemoryRead,MemoryWrite,Address,WriteData)
-		begin	
-		if(falling_edge(clock))then		
+		elsif(falling_edge(clock))then		
 				if (MemoryWrite = '1')then
 					Memory(conv_integer(address(5 downto 0))) <= WriteData; 
 				end if;
