@@ -8,9 +8,8 @@ entity MIPS is
 	--ELEMENTOS DE MIPS	
 Generic (size: integer := 32);
 	Port (
-	mainClock,Reset: in std_logic;
-	led: out std_logic  );
-	
+	mainClock,Reset: in std_logic);
+	--led: out std_logic);  
 end MIPS;
 
 architecture structural of MIPS is 	  
@@ -34,6 +33,9 @@ component PC_SECTION1 is
 		ReadAddress: in  STD_LOGIC_VECTOR(size-1 downto 0)				-- form PC Input (32 bits) actual address
 		);
 end component;
+
+
+
 
 --elementos de control
 	component Control is
@@ -167,7 +169,7 @@ end component;
 	signal read_data_mem: std_logic_vector (31 downto 0);
 	
 begin 
-	led <=ALU_zero;
+
 	--componentes de control
 	control_gral: Control port map (Instruction => Instruction, RegDst => RegDst,Jump => Jump,Branch => Branch,MemRead => MemRead,MemtoReg => MemtoReg,ALUOp => ALUOp,MemWrite => MemWrite,ALUSrc => ALUSrc,RegWrite => RegWrite);  
 	alu_control_main: ALU_control  port map (Instruction => Instruction, ALUOp => ALUOp,operacion => operacion);

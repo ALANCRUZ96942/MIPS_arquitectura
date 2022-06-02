@@ -1,4 +1,4 @@
-175
+200
 ~E 1 "../src/alus1.vhd" 27 ALU
 ~A 1 "../src/alus1.vhd" 39 ALU1
 ~E 1 "../src/ALU_control.vhd" 8 ALU_control
@@ -12,7 +12,7 @@
 ~E 1 "../src/instructionmemory.vhd" 30 InstructionMemory
 ~A 1 "../src/instructionmemory.vhd" 41 Behavioral
 ~E 1 "../src/MIPS.vhd" 6 MIPS
-~A 1 "../src/MIPS.vhd" 16 structural
+~A 1 "../src/MIPS.vhd" 15 structural
 ~E 1 "../src/MUX1.vhd" 6 MUX1
 ~A 1 "../src/MUX1.vhd" 14 Behavioral
 ~E 1 "../src/MUX2.vhd" 6 MUX2

@@ -41,7 +41,7 @@ end datamemory;
 
 architecture Behavioral of DataMemory is
 type memoryType is array (0 to 63) of STD_LOGIC_VECTOR (31 downto 0);
-signal memory : memoryType := (X"0000003F",
+signal memory : memoryType := (X"0000000A",
 X"0000003E",
 X"0000003D",
 X"0000003C",
@@ -112,7 +112,13 @@ begin
 				if(MemoryRead = '1')then
 					ReadData <= memory(conv_integer(address(5 downto 0))); 	 
 				end if;			
-		elsif(falling_edge(clock))then		
+	    end if;
+	end process;
+	
+	
+		process(clock,MemoryRead,MemoryWrite,Address,WriteData)
+		begin	
+		if(falling_edge(clock))then		
 				if (MemoryWrite = '1')then
 					Memory(conv_integer(address(5 downto 0))) <= WriteData; 
 				end if;

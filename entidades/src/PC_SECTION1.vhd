@@ -36,7 +36,7 @@ begin
 					NextAddress <= Add_1; --======================================================  Calc NORMAL operation next address (PC+4)
 				else 
 					SignExt_Shift <= SignExtend; --(29 downto 0) & "00";
-					NextAddress <= Add_1 + SignExt_Shift; --======================================  Calc BEQ address
+					NextAddress <= Add_1 + SignExt_Shift;--Add_1 + SignExt_Shift; --======================================  Calc BEQ address
 				end if;
 			end if;
 	end process;
