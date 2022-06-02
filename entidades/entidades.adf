@@ -30,7 +30,8 @@ FAMILY=
 /MUX3.vhd=-1
 /ALU_control.vhd=-1
 /control.vhd=-1
-/pruebas.vhd=-1
+/untitled.asdb=-1
+/untitled.awc=-1
 [Files.Data]
 .\src\seu.vhd=VHDL Source Code
 .\src\instructionmemory.vhd=VHDL Source Code
@@ -45,9 +46,11 @@ FAMILY=
 .\src\MUX3.vhd=VHDL Source Code
 .\src\ALU_control.vhd=VHDL Source Code
 .\src\control.vhd=VHDL Source Code
-.\src\pruebas.vhd=VHDL Source Code
+.\src\ruebas.vhd=VHDL Source Code
+.\src\untitled.asdb=Accelerated Waveform File
+.\src\untitled.awc=Accelerated Waveform Configuration
 [HierarchyViewer]
-HierarchyInformation=alu|ALU1|0 mips|structural|0
+HierarchyInformation=mips|structural|0
 ShowHide=ShowTopLevel
 Selected=
 [folders]

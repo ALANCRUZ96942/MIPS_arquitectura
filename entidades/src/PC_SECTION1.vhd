@@ -29,13 +29,13 @@ begin
 			Add_1 <= ReadAddress + 1;		-- Add1 (Normal operation) -- en verdad es mas 1?
 
 			if(Jump = '1') then  --MUX_PC_1	
-				Inst_Shift1 <= Instruction (25 downto 0) & "00"; --Shift Instruc (25-0) => (27-0);
-				NextAddress <= (Add_1 (31 downto 28)) & (Inst_Shift1);--==========================  Calc address to JUMP 
+				Inst_Shift1 <=  "00" & Instruction (25 downto 0); --& "00"; --Shift Instruc (25-0) => (27-0);
+				NextAddress <= Add_1 (31 downto 28) & (Inst_Shift1);--==========================  Calc address to JUMP 
 			else 
 				if (BEQ = '0') then --MUX_PC_2 
 					NextAddress <= Add_1; --======================================================  Calc NORMAL operation next address (PC+4)
 				else 
-					SignExt_Shift <= SignExtend (29 downto 0) & "00";
+					SignExt_Shift <= SignExtend; --(29 downto 0) & "00";
 					NextAddress <= Add_1 + SignExt_Shift; --======================================  Calc BEQ address
 				end if;
 			end if;

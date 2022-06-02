@@ -8,7 +8,9 @@ entity MIPS is
 	--ELEMENTOS DE MIPS	
 Generic (size: integer := 32);
 	Port (
-	mainClock: in std_logic);  
+	mainClock,Reset: in std_logic;
+	led: out std_logic  );
+	
 end MIPS;
 
 architecture structural of MIPS is 	  
@@ -19,7 +21,7 @@ architecture structural of MIPS is
 component PC is
     Port ( Input :  in STD_LOGIC_VECTOR (31 downto 0);
 	Output : out STD_LOGIC_VECTOR (31 downto 0);  
-	clock : in STD_logic);	
+	RESET_N, clock : in STD_logic);	
 
 end component;
 
@@ -32,9 +34,6 @@ component PC_SECTION1 is
 		ReadAddress: in  STD_LOGIC_VECTOR(size-1 downto 0)				-- form PC Input (32 bits) actual address
 		);
 end component;
-
-
-
 
 --elementos de control
 	component Control is
@@ -168,7 +167,7 @@ end component;
 	signal read_data_mem: std_logic_vector (31 downto 0);
 	
 begin 
-	
+	led <=ALU_zero;
 	--componentes de control
 	control_gral: Control port map (Instruction => Instruction, RegDst => RegDst,Jump => Jump,Branch => Branch,MemRead => MemRead,MemtoReg => MemtoReg,ALUOp => ALUOp,MemWrite => MemWrite,ALUSrc => ALUSrc,RegWrite => RegWrite);  
 	alu_control_main: ALU_control  port map (Instruction => Instruction, ALUOp => ALUOp,operacion => operacion);
@@ -186,7 +185,7 @@ begin
 	memory: datamemory port map (Address => ALU_result ,WriteData => ReadData2,MemoryWrite => MemWrite,MemoryRead => MemRead,Clock => mainClock, ReadData => read_data_mem);
 	
 	nube_pc: PC_SECTION1 port map(Branch  => Branch, Zero  => ALU_zero, Jump  => Jump,SignExtend  => ShiftLeft, Instruction  => Instruction,NextAddress  =>  NextAddress  ,ReadAddress => ReadAddress);
-	program_counter:  PC port map(Input => NextAddress,Output => ReadAddress,clock => mainClock);
+	program_counter:  PC port map(Input => NextAddress,Output => ReadAddress,clock => mainClock,RESET_N => Reset);
 	
 	main_alu: ALU port map(a => ALU_a,b => ALU_b,operacion => operacion ,result => ALU_result,cero => ALU_zero);
 end architecture;

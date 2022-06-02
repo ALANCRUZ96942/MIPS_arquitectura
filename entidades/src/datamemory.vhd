@@ -108,12 +108,20 @@ X"00000000");
 begin
 	process(clock,MemoryRead,MemoryWrite,Address,WriteData)
 		begin
-			if(rising_edge(clock))then
+	    if(rising_edge(clock))then	
 				if(MemoryRead = '1')then
-					ReadData <= memory(conv_integer(address(5 downto 0))); 
-				elsif (MemoryWrite = '1')then
+					ReadData <= memory(conv_integer(address(5 downto 0))); 	 
+				end if;			
+	    end if;
+	end process;
+	
+	
+		process(clock,MemoryRead,MemoryWrite,Address,WriteData)
+		begin	
+		if(falling_edge(clock))then		
+				if (MemoryWrite = '1')then
 					Memory(conv_integer(address(5 downto 0))) <= WriteData; 
 				end if;
-			end if;
+	    end if;
 	end process;
 end Behavioral;

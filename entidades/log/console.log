@@ -1,0 +1,71 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work entidades -2002  $dsn/src/seu.vhd $dsn/src/instructionmemory.vhd $dsn/src/alus1.vhd $dsn/src/mips_registers.vhd $dsn/src/pc.vhd $dsn/src/PC_SECTION1.vhd $dsn/src/MIPS.vhd $dsn/src/datamemory.vhd $dsn/src/MUX1.vhd $dsn/src/MUX2.vhd $dsn/src/MUX3.vhd $dsn/src/ALU_control.vhd $dsn/src/control.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/My_Designs/MIPS_final/entidades/src/seu.vhd
+# Compile Entity "Seu"
+# Compile Architecture "Behavioral" of Entity "Seu"
+# File: C:/My_Designs/MIPS_final/entidades/src/instructionmemory.vhd
+# Compile Entity "InstructionMemory"
+# Compile Architecture "Behavioral" of Entity "InstructionMemory"
+# File: C:/My_Designs/MIPS_final/entidades/src/alus1.vhd
+# Compile Entity "ALU"
+# Compile Architecture "ALU1" of Entity "ALU"
+# File: C:/My_Designs/MIPS_final/entidades/src/mips_registers.vhd
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# File: C:/My_Designs/MIPS_final/entidades/src/pc.vhd
+# Compile Entity "PC"
+# Compile Architecture "Behavioral" of Entity "PC"
+# File: C:/My_Designs/MIPS_final/entidades/src/PC_SECTION1.vhd
+# Compile Entity "PC_SECTION1"
+# Compile Architecture "Behavioral" of Entity "PC_SECTION1"
+# File: C:/My_Designs/MIPS_final/entidades/src/MIPS.vhd
+# Compile Entity "MIPS"
+# Compile Architecture "structural" of Entity "MIPS"
+# File: C:/My_Designs/MIPS_final/entidades/src/datamemory.vhd
+# Compile Entity "datamemory"
+# Compile Architecture "Behavioral" of Entity "DataMemory"
+# File: C:/My_Designs/MIPS_final/entidades/src/MUX1.vhd
+# Compile Entity "MUX1"
+# Compile Architecture "Behavioral" of Entity "MUX1"
+# File: C:/My_Designs/MIPS_final/entidades/src/MUX2.vhd
+# Compile Entity "MUX2"
+# Compile Architecture "Behavioral" of Entity "MUX2"
+# File: C:/My_Designs/MIPS_final/entidades/src/MUX3.vhd
+# Compile Entity "MUX3"
+# Compile Architecture "Behavioral" of Entity "MUX3"
+# File: C:/My_Designs/MIPS_final/entidades/src/ALU_control.vhd
+# Compile Entity "ALU_control"
+# Compile Architecture "Behavioral" of Entity "ALU_control"
+# File: C:/My_Designs/MIPS_final/entidades/src/control.vhd
+# Compile Entity "Control"
+# Compile Architecture "Behavioral" of Entity "Control"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+asim -O5 +access +r +m+MIPS MIPS structural
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6600 kB (elbread=427 elab2=6031 kernel=141 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\MIPS_final\entidades\src\wave.asdb
+# Stimuli: Warning: The stimuli set "StimuliSet134" has been made inactive.
+#  05:06 p. m., miércoles, 1 de junio de 2022
+#  Simulation has been initialized
+endsim
+# VSIM: Simulation has finished.
